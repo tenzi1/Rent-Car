@@ -1,0 +1,22 @@
+{% extends '_base.html' %}
+
+{% block title %}
+Car List
+{% endblock title %}
+
+{% block content %}
+{% if car_list %}
+ <h1>Choose your Car</h1>
+ <div>
+    {% for car in car_list %}
+    <div>
+    <h1><a href="{% url 'car-detail' pk=car.pk %}">{{ car.name }}</a></h1>
+    <img src="..." class="rounded mx-auto d-block" alt="...">
+    <p>{{car.description }}</p>
+    </div>
+   {% endfor %}
+ </div>
+  {% else %}
+    <i>Currently No Cars available for rent!!!!</i>
+{% endif %}
+{% endblock%}
