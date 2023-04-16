@@ -24,3 +24,9 @@ class Booking(models.Model):
     def __str__(self):
         return f'Booking for {self.customer_name}'
 
+class Category(models.Model):
+    car = models.ForeignKey(Car, on_delete=models.CASCADE)
+    category = models.CharField(max_length=100)
+
+    def __str__(self):
+        return self.category

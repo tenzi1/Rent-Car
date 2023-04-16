@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from .models import Car, Booking
+from .models import Car, Booking, Category
 
 admin.site.register(Car)
 
@@ -34,3 +34,4 @@ class BookingModelAdmin(admin.ModelAdmin):
 
 
                 
+admin.site.register(Category)
