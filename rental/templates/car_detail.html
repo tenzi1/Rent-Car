@@ -13,10 +13,13 @@
             <img src="{{ car.image.url }}" class="rounded mx-auto d-block" alt="...">
         </div>
     <div class="col-md-8">
-        <h1><a href="{% url 'car-detail' pk=car.pk %}">{{ car.name }}</a></h1>
+        <h1><a href="{% url 'car-detail' pk=car.pk %}" class="text-black ">{{ car.name }}</a></h1>
         <p>{{car.description }}</p>
        <p> <b>Daily Rent</b>: ${{ car.daily_rent}} </p>
        <p> <b>Status</b>: {{ car.is_available }}</p>
+        
+       <a href="{% url 'book-car' pk=car.pk %}" class="btn btn-info">Book Now</a>
+       <a href="" class="btn btn-warning">Cancel</a>
     </div>    
 </div>
 </div>

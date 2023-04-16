@@ -1,9 +1,90 @@
 {% extends '_base.html' %}
-
+{% load static %}
 {% block title %}
 Home
 {% endblock title %}
 
 {% block content %}
-<h1>Welcome To Our Car Rental Service.</h1>
+
+
+
+    <!-- Hero Section -->
+    <section class="hero-section vh-80 d-flex align-items-center justify-content-center mt-5">
+      <div class="container  bg-light py-5 rounded">
+        <div class="row">
+          <div class="col-lg-6">
+            <h1>Drive the Car of Your Dreams</h1>
+            <p>Rent the best cars at the best prices from us.</p>
+            <a href="#pricing-section" class="btn btn-primary">Get Started</a>
+          </div>
+          <div class="col-lg-6">
+            <img
+              src="{% static 'img/car.jpg'%}"
+              alt="Car Rental"
+              class="img-fluid"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Pricing Section -->
+<section class="pricing-section" id="pricing-section">
+  <div class="container vh-100 d-flex justify-content-center align-items-center">
+    
+    <div class="row justify-content-center ">
+        <h2 class="text-center p-3">Our Pricing</h2>
+      <div class="col-lg-4">
+        <div class="card">
+          <div class="card-header">
+            <h3 class="text-center">Economy</h3>
+          </div>
+          <div class="card-body">
+            <h4 class="card-title text-center">$49/day</h4>
+            <p class="card-text text-center">$299/week</p>
+            <p class="card-text text-center"><small class="text-muted">10% discount for weekly rentals</small></p>
+            <p class="card-text text-center"><small class="text-muted">15% discount for rentals longer than 2 weeks</small></p>
+            <div class="text-center">
+            <a href="#" class="btn btn-primary">Book Now</a>  
+        </div>
+        </div>
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <div class="card">
+          <div class="card-header">
+            <h3 class="text-center">Standard</h3>
+          </div>
+          <div class="card-body">
+            <h4 class="card-title text-center">$69/day</h4>
+            <p class="card-text text-center">$399/week</p>
+            <p class="card-text text-center"><small class="text-muted">15% discount for weekly rentals</small></p>
+            <p class="card-text text-center"><small class="text-muted">15% discount for rentals longer than 2 weeks</small></p>
+            <div class="text-center">
+            <a href="#" class="btn btn-primary">Book Now</a>  
+        </div>
+        </div>
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <div class="card">
+          <div class="card-header">
+            <h3 class="text-center">Luxury</h3>
+          </div>
+          <div class="card-body">
+            <h4 class="card-title text-center">$99/day</h4>
+            <p class="card-text text-center">$499/week</p>
+            <p class="card-text text-center"><small class="text-muted">20% discount for weekly rentals</small></p>
+            <p class="card-text text-center"><small class="text-muted">25% discount for rentals longer than 2 weeks</small></p>
+            <div class="text-center">
+            <a href="#" class="btn btn-primary">Book Now</a>  
+        </div>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 {% endblock %}

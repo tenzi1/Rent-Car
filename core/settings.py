@@ -41,7 +41,16 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
 
     "rental",
+
+    # 3rd party application
+    "crispy_forms",
+    "crispy_bootstrap5",
 ]
+
+# Crispy form settings
+CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
+
+CRISPY_TEMPLATE_PACK = "bootstrap5"
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
