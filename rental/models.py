@@ -8,5 +8,20 @@ class Car(models.Model):
     daily_rent = models.IntegerField()
     is_available = models.BooleanField()
     
-    # def get_absolute_url(self):
-    #     return reverse('car-details'. kwargs={'pk':self.pk})
+    def get_absolute_url(self):
+        return reverse('car-detail', kwargs={'pk':self.pk})
+
+    def __str__(self):
+        return self.name
+    
+class Booking(models.Model):
+    car = models.ManyToManyField(Car)
+    customer_name = models.CharField(max_length=100)
+    booking_start_date = models.DateField()
+    booking_end_date = models.DateField()
+    is_approved = models.BooleanField(default=False)
+
+    def __str__(self):
+        return f'Booking for {self.customer_name}'
+
+        
