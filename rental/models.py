@@ -24,4 +24,3 @@ class Booking(models.Model):
     def __str__(self):
         return f'Booking for {self.customer_name}'
 
-        
