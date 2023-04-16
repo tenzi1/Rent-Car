@@ -6,15 +6,19 @@ Car List
 
 {% block content %}
 {% if car_list %}
+<div class="container text-center">
  <h1>Choose your Car</h1>
- <div>
+<div class="p-5">
+ <div class="row justify-content-md-center">
     {% for car in car_list %}
-    <div>
+    <div class="col-md-auto">
     <h1><a href="{% url 'car-detail' pk=car.pk %}">{{ car.name }}</a></h1>
-    <img src="..." class="rounded mx-auto d-block" alt="...">
-    <p>{{car.description }}</p>
+    <img src="{{ car.image.url }}" class="rounded mx-auto d-block" alt="...">
+   
     </div>
    {% endfor %}
+ </div>
+ </div>
  </div>
   {% else %}
     <i>Currently No Cars available for rent!!!!</i>
